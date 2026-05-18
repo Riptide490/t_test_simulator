@@ -28,11 +28,11 @@ ui <- fluidPage(
       conditionalPanel(
         condition = "input.dist_type == 'Normal (Floor at 0)'",
         hr(),
-        tags$b("Population 1 (Data)"),
+        tags$b("Population 1"),
         sliderInput("mean1_f", "Mean (Before Floor):", min = -2, max = 5, value = 2, step = 0.1),
         sliderInput("sd1_f", "SD:", min = 0.5, max = 5, value = 1, step = 0.1),
         hr(),
-        tags$b("Population 2 (Control)"),
+        tags$b("Population 2"),
         sliderInput("mean2_f", "Mean (Before Floor):", min = -2, max = 5, value = 0, step = 0.1),
         sliderInput("sd2_f", "SD:", min = 0.5, max = 5, value = 1, step = 0.1)
       ),
