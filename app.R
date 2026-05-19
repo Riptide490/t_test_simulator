@@ -165,7 +165,7 @@ server <- function(input, output) {
     d <- test_data()
     df_plot <- data.frame(
       val = c(d$samp1, d$samp2),
-      Group = factor(rep(c("Sample 1 (Data)", "Sample 2 (Control)"), each = input$n))
+      Group = factor(rep(c("Sample 1", "Sample 2"), each = input$n))
     )
     
     ggplot(df_plot, aes(x = val, fill = Group)) +
