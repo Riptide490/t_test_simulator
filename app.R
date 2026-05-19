@@ -172,7 +172,7 @@ server <- function(input, output) {
       geom_histogram(aes(y = after_stat(density)), position = "identity", alpha = 0.5, bins = 30, color = "white") +
       geom_vline(xintercept = mean(d$samp1), color = "steelblue", linewidth = 1, linetype = "dashed") +
       geom_vline(xintercept = mean(d$samp2), color = "indianred", linewidth = 1, linetype = "dashed") +
-      scale_fill_manual(values = c("Sample 1 (Data)" = "steelblue", "Sample 2 (Control)" = "indianred")) +
+      scale_fill_manual(values = c("Sample 1" = "steelblue", "Sample 2" = "indianred")) +
       theme_minimal() + 
       theme(legend.position = "top") +
       labs(title = "Two-Sample Distribution Comparison", subtitle = "Dashed lines = Group Sample Means", x = "Value", y = "Density")
